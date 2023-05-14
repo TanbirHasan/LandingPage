@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <div>
+      <header class="py-5 lg:px-[102px] border-b bg-[#F0F4EC]">
+        <nav
+          class="flex flex-col sm:flex-row md:flex-row lg:flex-row justify-between items-center flex-wrap"
+        >
+          <div class="flex justify-between w-full md:w-2/4 lg:w-2/4 px-5">
+            <div class="relative">
+              <h2 class="cursive-font text-[#396C03] font-bold lg:text-[29px]">
+                Food Time
+              </h2>
+              <img
+                src="./images/clock-tick.png"
+                alt=""
+                class="absolute top-0 right-[-10px]"
+              />
+            </div>
+            <button
+              class="md:hidden lg:hidden xl:hidden"
+              onclick="toggleMenu()"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <ul
+            id="menu"
+            class="flex flex-col md:flex-row lg:flex-row gap-8 items-center text-[#3F3F3F] font-medium hidden md:flex lg:flex"
+          >
+            <li>Home</li>
+            <li>Blog</li>
+            <li>About Us</li>
+            <li>
+              <select>
+                <option>EN</option>
+                <option>BN</option>
+                <option>SN</option>
+              </select>
+            </li>
+            <li>
+              <button
+                class="bg-[#396C03] text-white w-[100px] h-[50px] rounded-[250px]"
+              >
+                Login
+              </button>
+            </li>
+            <div class="flex">
+              <li class="bg-[#396C03] p-2 rounded-full realtive">
+                <image src="./images/Vector.png" width="20" height="10" />
+              </li>
+
+              <button
+                type="button"
+                class="absolute w-4 h-4 text-base rounded-full lg:right-[100px] text-white bg-red-500"
+              >
+                <span class="text-[11px] relative top-[-6px]"> 2 </span>
+              </button>
+            </div>
+          </ul>
+        </nav>
+      </header>
+
+      <section
+        class="flex flex-col lg:flex-row justify-between px-10 lg:px-[102px] items-center bg-[#F0F4EC] pb-[130px] pt-[80px]"
+      >
+        <div class="hidden lg:block absolute top-0 left-0 lg-[300px] h-[300px]">
+          <img src="./images/leaf.png" alt="" />
+        </div>
+        <div class="z-50">
+          <h2
+            class="text-[40px] lg:text-[65px] text-[#396C03] leading-12 pb-5 cursive-font"
+          >
+            Order food online<br />
+            from your favourite<br />
+            local restaurants.
+          </h2>
+          <h3 class="text-[#676767] font-semibold py-[27px] text-2xl">
+            Freshly made food delivered to your door.
+          </h3>
+          <div class="search-container">
+            <div class="circle"></div>
+            <input
+              type="text"
+              placeholder="Enter your location"
+              class="search-input lg:w-[700px] placeholder-[#C7C7C7]"
+            />
+            <button
+              type="submit"
+              class="search-button bg-[#396C03] text-white lg:w-[200px] flex justify-center items-center gap-3"
+            >
+              <img src="./images/search.png" alt="" class="w-[18px] h-[18px]" />
+              <span class="font-medium text-white text-[22px]">Search</span>
+            </button>
+          </div>
+        </div>
+        <div class="mt-10 md:mt-0 lg:mt-0">
+          <!-- <div class="hidden lg:block absolute bottom-[280px] right-0 lg-[300px] lg:h-[300px]">
+						<img src="./images/leaf.png" alt="" />
+					</div> -->
+          <image
+            src="./images/niceplatter.png"
+            width="200"
+            height="150"
+            class="z-1 absolute top-25 left-[30%] md:left-[55%] lg:left-[55%] xl:left-[55%]"
+          />
+		  <image
+		  src="./images/leaf.png"
+		  width="250"
+		  height="230"
+		  class="z-1 absolute top-20 left-[83%]  hidden md:block lg:block xl:block"
+		/>
+          <div class="relative mt-5">
+            <div class="bg-white w-1/3 absolute top-[-10px] left-[35%] rounded p-2 text-center" style="opacity: 0.7;">
+              <h2 class="text-[#D35400] text-xl font-bold">200 K+</h2>
+			  <span>People delivered</span>
+            </div>
+            <image
+              src="./images/image1.png"
+              width="500"
+              height="300"
+              class="z-50"
+            />
+          </div>
+        
+        </div>
+      </section>
+
+      <section
+        class="px-10 lg:px-[102px] flex flex-col lg:flex-row justify-between items-center"
+      >
+        <div class="w-full lg:w-2/4 mt-5">
+          <h2
+            class="text-[40px] lg:text-[65px] text-[#396C03] leading-12 pb-5 cursive-font"
+          >
+            Explore your favourite city’s food.
+          </h2>
+          <p class="text-[#676767]">
+            Lorem ipsum dolor sit amet consectetur. Ornare massa nunc nibh
+            tristique. Non ligula tristique ut ut libero sit convallis maecenas.
+            At egestas auctor porta mattis.
+          </p>
+          <button
+            class="bg-[#396C03] text-white px-20 mt-[14px] h-[50px] rounded-[250px] flex items-center justify-center gap-4"
+          >
+            Explore
+            <img src="./images/right-arrow.png" alt="" />
+          </button>
+        </div>
+
+        <div class="w-full lg:w-2/4 overflow-hidden">
+          <div class="relative">
+            <img src="./images/cycle.png" alt="" />
+            <div class="absolute top-0 right-7">
+              <img src="./images/rider.png" alt="" id="cycle-img" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>
